@@ -63,7 +63,7 @@ if __name__ == "__main__":
     st.set_page_config(layout = "wide")
     st.title("Generalized Prophet Forecasting")
 
-    st.write("This Daisi, powered by Streamlit, allows for a generalized specification of a Prophet forecasting model. Upload your data to get started!")
+    st.write("This Daisi allows for a generalized specification of a Prophet forecasting model. Upload your data to get started!")
     with st.sidebar:
         uploaded_file = st.file_uploader("Choose a file")
     
