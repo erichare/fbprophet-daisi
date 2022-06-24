@@ -3,5 +3,5 @@ numpy
 pandas
 streamlit
 pystan==2.19.1.1
-prophet
+fbprophet
 pydaisi
