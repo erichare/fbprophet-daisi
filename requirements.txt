@@ -1,0 +1,6 @@
+bokeh==2.4.1
+numpy
+pandas
+streamlit
+fbprophet
+pydaisi
