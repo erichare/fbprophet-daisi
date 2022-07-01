@@ -10,6 +10,16 @@ import pydaisi as pyd
 
 
 def plot_prophet(df: pd.DataFrame):
+    '''
+    Plot a fitted Prophet model
+
+    This function takes a data frame that contains a fit prophet model
+    and returns a Bokeh plot of the results.
+
+    :param pd.DataFrame df: The data to plot, generated from fit_prophet()
+
+    :return: Bokeh Visualization of Prophet Results
+    '''
     source = ColumnDataSource(df)
 
     p = figure(x_axis_type="datetime", plot_width=800, plot_height=350)
@@ -26,10 +36,10 @@ def fit_prophet(df: pd.DataFrame=None, x_var: str=None, y_var: str=None, periods
     and number of components, fits a prophet model to the data. If the input data
     frame is not specified, Daisi creation data is used by default
 
-    :param df pd.DataFrame: The data with which to generate Prinicpal Components
-    :param x_var str: The date variable to use in the data frame
-    :param y_var str: The response variable to use in the data frame
-    :param periods int: The number of periods to predict
+    :param pd.DataFrame df: The data with which to generate Prinicpal Components
+    :param str x_var: The date variable to use in the data frame
+    :param str y_var: The response variable to use in the data frame
+    :param int periods: The number of periods to predict
 
     :return: DataFrame of Prophet Results
     '''
