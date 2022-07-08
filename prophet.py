@@ -80,8 +80,8 @@ if __name__ == "__main__":
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
     else:
-        daisi_platform_growth = pyd.Daisi("erichare/Daisi Platform Growth", base_url="https://dev3.daisi.io")
-        df = daisi_platform_growth.get_growth(instance="dev3").value
+        daisi_platform_growth = pyd.Daisi("erichare/Daisi Platform Growth")
+        df = daisi_platform_growth.get_growth().value
         x_var = "date"
         y_var = "total"
 
