@@ -83,6 +83,7 @@ if __name__ == "__main__":
         # daisi_platform_growth = pyd.Daisi("erichare/Daisi Platform Growth")
         # df = daisi_platform_growth.get_growth().value
         df = pd.read_csv("growth.csv")
+        df['date'] = pd.to_datetime(df['date'])
         x_var = "date"
         y_var = "total"
 
