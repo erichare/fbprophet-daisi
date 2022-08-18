@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 
-from fbprophet import Prophet
+from prophet import Prophet
 from bokeh.plotting import figure, show, ColumnDataSource, output_file
 
 import pydaisi as pyd
