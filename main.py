@@ -47,10 +47,9 @@ def fit_prophet(df: pd.DataFrame=None, x_var: str=None, y_var: str=None, periods
         df = pd.read_csv(df)
 
     if df is None:
-        daisi_platform_growth = pyd.Daisi("erichare/Daisi Platform Growth", base_url="https://dev3.daisi.io")
-        df = daisi_platform_growth.get_growth(instance="dev3").value
+        df = pd.read_csv("https://raw.githubusercontent.com/jiwidi/time-series-forecasting-with-python/master/datasets/air_pollution.csv")
         x_var = "date"
-        y_var = "total"
+        y_var = "temp"
 
     m = Prophet()
 
