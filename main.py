@@ -48,6 +48,8 @@ def fit_prophet(df: pd.DataFrame=None, x_var: str=None, y_var: str=None, periods
 
     if df is None:
         df = pd.read_csv("https://raw.githubusercontent.com/jiwidi/time-series-forecasting-with-python/master/datasets/air_pollution.csv")
+        df["date"] = pd.to_datetime(df["date"])
+        
         x_var = "date"
         y_var = "temp"
 
@@ -79,12 +81,11 @@ if __name__ == "__main__":
     if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
     else:
-        # daisi_platform_growth = pyd.Daisi("erichare/Daisi Platform Growth")
-        # df = daisi_platform_growth.get_growth().value
-        df = pd.read_csv("growth.csv")
-        df['date'] = pd.to_datetime(df['date'])
+        df = pd.read_csv("https://raw.githubusercontent.com/jiwidi/time-series-forecasting-with-python/master/datasets/air_pollution.csv")
+        df["date"] = pd.to_datetime(df["date"])
+        
         x_var = "date"
-        y_var = "total"
+        y_var = "temp"
 
     numeric_vars = list(df.select_dtypes([np.number]).columns)
     date_vars = list(df.select_dtypes(include=['datetime64', 'datetime64[ns]', 'datetime64[ns, UTC]']))
