@@ -43,6 +43,7 @@ def fit_prophet(df: pd.DataFrame=None, x_var: str=None, y_var: str=None, periods
 
     :return: DataFrame of Prophet Results
     '''
+    periods = int(periods)
     if type(df) == str and os.path.isfile(df):
         df = pd.read_csv(df)
 
